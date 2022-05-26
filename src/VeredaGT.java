@@ -46,7 +46,7 @@ public class VeredaGT implements Vehicle{
     @Override
     public void move() {
 
-        if (energy < ENERGY_DELTA ) {
+        if (energy < ENERGY_DELTA || (energy - ENERGY_DELTA) < 0 ) {
             System.out.println("\n\t----------------------------------------");
             System.out.println("El vehículo no puede realizar movimientos " +
                                 "no tiene la energía necesaria");
